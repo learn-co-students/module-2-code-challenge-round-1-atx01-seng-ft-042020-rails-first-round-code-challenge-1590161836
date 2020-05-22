@@ -143,3 +143,5 @@ On the Powers index page, show the total number of Heroines for each Power.
 ## Rubric
 
 You can find the rubric for this assessment [here](https://github.com/learn-co-curriculum/se-rubrics/blob/master/module-2.md).
+
+adfasdfadsfa
