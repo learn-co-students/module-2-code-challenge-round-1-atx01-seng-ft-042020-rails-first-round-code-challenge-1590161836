@@ -1,0 +1,37 @@
+<h2> New Heroine </h2>
+
+<%= form_for(@heroine) do |f| %>
+
+    <% if @heroine.errors.any? %>
+        <h2>Errors:</h2>
+        <ul>
+            <% @heroine.errors.full.messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ul>
+    <% end %>
+
+    <% if @heroine.errors[:name].empty? %>
+    <div class="field">
+  <% else %>
+    <div class="field_with_errors">
+  <% end %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :super_name %>
+        <%= f.text_field :super_name %>
+    </div>
+
+    <div>
+    <%= select_tag "Power", options_for_select(@powers) %>
+    </div>
+
+    <div>
+        <%= f.submit "Create" %>
+    </div>
+
+<% end %>
+
