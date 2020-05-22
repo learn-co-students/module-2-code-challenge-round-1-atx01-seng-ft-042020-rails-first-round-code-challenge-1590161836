@@ -1,0 +1,10 @@
+<h1> Power </h1>
+
+
+<div class="power-container">
+    <h2><%= @power.name %></h2>
+    <p><%= @power.description %></p>
+</div>
+
+<%= link_to 'Edit Power', edit_power_path(@power) %>
+<%= link_to 'See All Powers', powers_path %>
