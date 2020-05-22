@@ -1,0 +1,17 @@
+<h2>Edit Power</h2>
+
+<%= form_for @power do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %><br>
+
+    <% Heroine.all.each do |heroine| %>
+        <%= heroine.name %> <%= check_box("power", "heroine_ids", {:multiple => true, checked: @power.heroines.include?(heroine)}, heroine.id, nil) %>
+        <br>
+    <% end %>
+
+
+    <%= f.submit %>
+<% end %>

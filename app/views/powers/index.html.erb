@@ -6,6 +6,9 @@
       <%= power.name %>
       <br>
       Description: <%= power.description %>
+      <br>
+      <%= pluralize(power.heroines.count, "heroine") %> with this power!
+      <br> 
     </li>
     <br>
   <% end %>
