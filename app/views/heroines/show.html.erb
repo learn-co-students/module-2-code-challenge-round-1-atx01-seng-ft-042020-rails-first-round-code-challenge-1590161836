@@ -1,0 +1,3 @@
+<p>Name: <%= @heroine.name %> </p>
+<p>Super Name: <%= @heroine.super_name %> </p>
+<p>Powers: <%= link_to HeroinePower.find_by(heroine_id: @heroine.id).power.name, power_path(HeroinePower.find_by(heroine_id: @heroine.id).power.id) %> </p>

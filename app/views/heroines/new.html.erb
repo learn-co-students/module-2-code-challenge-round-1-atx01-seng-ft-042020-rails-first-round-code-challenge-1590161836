@@ -1,0 +1,21 @@
+<h1>Create a new heroine!</h1>
+
+<% if @heroine.errors.any? %>
+
+<% @heroine.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+    
+<% end %>
+<%= form_for @heroine do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :super_name %>
+    <%= f.text_field :super_name %>
+
+
+    <%= f.submit %>
+
+<% end %>

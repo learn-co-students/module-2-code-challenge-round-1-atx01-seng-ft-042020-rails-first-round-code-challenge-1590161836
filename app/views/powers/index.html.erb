@@ -3,9 +3,11 @@
 <ul>
   <% @powers.each do |power| %>
     <li>
-      <%= power.name %>
+      <%= link_to power.name, power_path(power) %>
       <br>
       Description: <%= power.description %>
+      <br>
+      This many people have this power: <% HeroinePower.find_by(power_id: power.id) %>
     </li>
     <br>
   <% end %>
