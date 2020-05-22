@@ -1,0 +1,13 @@
+<h1>Edit Power</h1>
+<%= form_for @power do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %><br/>
+    <%= f.label :description %>
+    <%= f.text_field :description %><br/>
+    <%= f.collection_check_boxes :heroine_ids, Heroine.all, :id, :super_name %>
+    <%= f.fields_for :heroines, @power.heroines.build do |heroines_fields| %>
+      <%= heroines_fields.text_field :super_name %><br/>
+    <% end %>
+    <%= f.submit %>
+
+<% end %>
