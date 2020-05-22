@@ -3,7 +3,9 @@
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine_path heroine do %>
+        <%= heroine.super_name %>
+      <%end%>
     </li>
     <br>
   <% end %>

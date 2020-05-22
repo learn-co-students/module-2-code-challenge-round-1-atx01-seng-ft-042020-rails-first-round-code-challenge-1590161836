@@ -1,0 +1,15 @@
+<h1> Heroine </h1> 
+
+
+<div class="heroine-container">
+    <h2><%= @heroine.name %></h2>
+    <h2 class="super"><%= @heroine.super_name %></h2>
+
+    <h4> Powers </h4>
+    <% @heroine.powers.each do |power| %>
+        <%= link_to power_path power do %>
+            <%= power.name %>
+        <% end %>
+    <% end %>
+    
+</div>
